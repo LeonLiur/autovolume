@@ -14,6 +14,7 @@
 		18FDCFBC2E885A6D007548B6 /* AutoVolumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDCFBB2E885A6D007548B6 /* AutoVolumeTests.swift */; };
 		18FDCFC62E885A6D007548B6 /* AutoVolumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDCFC52E885A6D007548B6 /* AutoVolumeUITests.swift */; };
 		18FDCFC82E885A6D007548B6 /* AutoVolumeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDCFC72E885A6D007548B6 /* AutoVolumeUITestsLaunchTests.swift */; };
+		18FDCFD52E885BFF007548B6 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18FDCFD42E885BFF007548B6 /* info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		18FDCFC12E885A6D007548B6 /* AutoVolumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoVolumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FDCFC52E885A6D007548B6 /* AutoVolumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoVolumeUITests.swift; sourceTree = "<group>"; };
 		18FDCFC72E885A6D007548B6 /* AutoVolumeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoVolumeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		18FDCFD42E885BFF007548B6 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		18FDCF9D2E885A6C007548B6 = {
 			isa = PBXGroup;
 			children = (
+				18FDCFD42E885BFF007548B6 /* info.plist */,
 				18FDCFA82E885A6C007548B6 /* AutoVolume */,
 				18FDCFBA2E885A6D007548B6 /* AutoVolumeTests */,
 				18FDCFC42E885A6D007548B6 /* AutoVolumeUITests */,
@@ -235,6 +238,7 @@
 			files = (
 				18FDCFB12E885A6D007548B6 /* Preview Assets.xcassets in Resources */,
 				18FDCFAE2E885A6D007548B6 /* Assets.xcassets in Resources */,
+				18FDCFD52E885BFF007548B6 /* info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
