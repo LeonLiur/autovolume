@@ -43,6 +43,7 @@ class VolumeController: ObservableObject {
     private func adjustVolume() {
         let currentDB = max(audioMonitor.currentDB, 0.1)
         let targetVolume = min(max(initialRatio * currentDB, 0.0), 1.0)
+        print("trying to set target volume:", targetVolume)
         setSystemVolume(targetVolume)
     }
 }

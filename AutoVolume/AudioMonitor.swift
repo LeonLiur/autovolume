@@ -21,11 +21,7 @@ class AudioMonitor {
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: format) { buffer, _ in
             let channelData = buffer.floatChannelData![0]
             let frameLength = Int(buffer.frameLength)
-            
-            // Log some sample values for debugging
-            if frameLength > 0 {
-                print("Sample values: \(channelData[0]), \(channelData[1]), \(channelData[2])")
-            }
+
             
             let rms = sqrt((0..<frameLength).reduce(0) { $0 + pow(channelData[$1], 2) } / Float(frameLength))
             let db = 20 * log10(rms)

@@ -14,7 +14,8 @@
 		18FDCFBC2E885A6D007548B6 /* AutoVolumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDCFBB2E885A6D007548B6 /* AutoVolumeTests.swift */; };
 		18FDCFC62E885A6D007548B6 /* AutoVolumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDCFC52E885A6D007548B6 /* AutoVolumeUITests.swift */; };
 		18FDCFC82E885A6D007548B6 /* AutoVolumeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDCFC72E885A6D007548B6 /* AutoVolumeUITestsLaunchTests.swift */; };
-		18FDCFD52E885BFF007548B6 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18FDCFD42E885BFF007548B6 /* info.plist */; };
+		18FDCFD52E885BFF007548B6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18FDCFD42E885BFF007548B6 /* Info.plist */; };
+		18FDCFD82E887766007548B6 /* AudioTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDCFD72E887766007548B6 /* AudioTester.swift */; };
 		44447C472E88651D007A8ED3 /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44447C462E88651A007A8ED3 /* AudioMonitor.swift */; };
 		44447C492E8866A8007A8ED3 /* SystemVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44447C482E88669D007A8ED3 /* SystemVolume.swift */; };
 		44447C4B2E8866B3007A8ED3 /* VolumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44447C4A2E8866B0007A8ED3 /* VolumeController.swift */; };
@@ -49,7 +50,8 @@
 		18FDCFC12E885A6D007548B6 /* AutoVolumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoVolumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FDCFC52E885A6D007548B6 /* AutoVolumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoVolumeUITests.swift; sourceTree = "<group>"; };
 		18FDCFC72E885A6D007548B6 /* AutoVolumeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoVolumeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		18FDCFD42E885BFF007548B6 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		18FDCFD42E885BFF007548B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FDCFD72E887766007548B6 /* AudioTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTester.swift; sourceTree = "<group>"; };
 		44447C462E88651A007A8ED3 /* AudioMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
 		44447C482E88669D007A8ED3 /* SystemVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemVolume.swift; sourceTree = "<group>"; };
 		44447C4A2E8866B0007A8ED3 /* VolumeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeController.swift; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 		18FDCF9D2E885A6C007548B6 = {
 			isa = PBXGroup;
 			children = (
-				18FDCFD42E885BFF007548B6 /* info.plist */,
 				18FDCFA82E885A6C007548B6 /* AutoVolume */,
 				18FDCFBA2E885A6D007548B6 /* AutoVolumeTests */,
 				18FDCFC42E885A6D007548B6 /* AutoVolumeUITests */,
@@ -104,6 +105,7 @@
 		18FDCFA82E885A6C007548B6 /* AutoVolume */ = {
 			isa = PBXGroup;
 			children = (
+				18FDCFD42E885BFF007548B6 /* Info.plist */,
 				44447C4A2E8866B0007A8ED3 /* VolumeController.swift */,
 				44447C482E88669D007A8ED3 /* SystemVolume.swift */,
 				44447C462E88651A007A8ED3 /* AudioMonitor.swift */,
@@ -112,6 +114,7 @@
 				18FDCFAD2E885A6D007548B6 /* Assets.xcassets */,
 				18FDCFB22E885A6D007548B6 /* AutoVolume.entitlements */,
 				18FDCFAF2E885A6D007548B6 /* Preview Content */,
+				18FDCFD72E887766007548B6 /* AudioTester.swift */,
 			);
 			path = AutoVolume;
 			sourceTree = "<group>";
@@ -247,7 +250,7 @@
 			files = (
 				18FDCFB12E885A6D007548B6 /* Preview Assets.xcassets in Resources */,
 				18FDCFAE2E885A6D007548B6 /* Assets.xcassets in Resources */,
-				18FDCFD52E885BFF007548B6 /* info.plist in Resources */,
+				18FDCFD52E885BFF007548B6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18FDCFAC2E885A6C007548B6 /* ContentView.swift in Sources */,
+				18FDCFD82E887766007548B6 /* AudioTester.swift in Sources */,
 				18FDCFAA2E885A6C007548B6 /* AutoVolumeApp.swift in Sources */,
 				44447C4B2E8866B3007A8ED3 /* VolumeController.swift in Sources */,
 				44447C492E8866A8007A8ED3 /* SystemVolume.swift in Sources */,
@@ -443,6 +447,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AutoVolume/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutoVolume/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,6 +473,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AutoVolume/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutoVolume/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

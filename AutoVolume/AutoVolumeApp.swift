@@ -6,13 +6,24 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 @main
 struct AutoVolumeApp: App {
     @StateObject private var volumeController = VolumeController()
+    
+    init() {
+        AVCaptureDevice.requestAccess(for: .audio) { granted in
+            if granted {
+                print("✅ Mic access granted")
+            } else {
+                print("❌ Mic access denied")
+            }
+        }
+    }
 
     var body: some Scene {
-        MenuBarExtra("AutoVolume", systemImage: "speaker.wave.2.fill") {
+        MenuBarExtra("AutoVolume", image: "MenuBar") {
             Text("Ambient dB: \(Int(volumeController.audioMonitor.currentDB))")
             Toggle("Auto Adjust", isOn: Binding(
                 get: { volumeController.isAutoAdjusting },
