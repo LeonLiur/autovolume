@@ -9,11 +9,21 @@ import SwiftUI
 
 @main
 struct AutoVolumeApp: App {
-    @StateObject private var audioMonitor = AudioMonitor()
+    @StateObject private var volumeController = VolumeController()
 
     var body: some Scene {
         MenuBarExtra("AutoVolume", systemImage: "speaker.wave.2.fill") {
-            Text("Ambient dB: \(Int(audioMonitor.currentDB))")
+            Text("Ambient dB: \(Int(volumeController.audioMonitor.currentDB))")
+            Toggle("Auto Adjust", isOn: Binding(
+                get: { volumeController.isAutoAdjusting },
+                set: { isOn in
+                    if isOn {
+                        volumeController.start()
+                    } else {
+                        volumeController.stop()
+                    }
+                }
+            ))
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
             }
