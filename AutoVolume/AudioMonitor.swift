@@ -15,23 +15,38 @@ class AudioMonitor {
         let inputNode = engine.inputNode
         let format = inputNode.inputFormat(forBus: 0)
         
+        print("Starting audio monitoring...")
+        print("Input format: \(format)")
+        
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: format) { buffer, _ in
             let channelData = buffer.floatChannelData![0]
             let frameLength = Int(buffer.frameLength)
+            
+            // Log some sample values for debugging
+            if frameLength > 0 {
+                print("Sample values: \(channelData[0]), \(channelData[1]), \(channelData[2])")
+            }
             
             let rms = sqrt((0..<frameLength).reduce(0) { $0 + pow(channelData[$1], 2) } / Float(frameLength))
             let db = 20 * log10(rms)
             
             DispatchQueue.main.async {
                 self.currentDB = db.isFinite ? db : -160
+                print("Current DB: \(self.currentDB)") // Debug output
             }
         }
         
-        try? engine.start()
+        do {
+            try engine.start()
+            print("Audio engine started successfully")
+        } catch {
+            print("Failed to start audio engine: \(error)")
+        }
     }
     
     func stop() {
         engine.inputNode.removeTap(onBus: 0)
         engine.stop()
+        print("Audio monitoring stopped")
     }
 }
